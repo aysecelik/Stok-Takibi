@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8B1F679-BBFA-45C3-AEAA-F3A8024E689B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>İşbirSünger</RootNamespace>
+    <AssemblyName>İşbirSünger</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.7.0-develop00310\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Excel.14.0.4760.1000\lib\net20\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AYLIK STOK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AYLIK STOK.Designer.cs">
+      <DependentUpon>AYLIK STOK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baglanti.cs" />
+    <Compile Include="DOSYADAN MÜŞTERİ YÜKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOSYADAN MÜŞTERİ YÜKLE.Designer.cs">
+      <DependentUpon>DOSYADAN MÜŞTERİ YÜKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOSYADAN TEDARİKÇİ YÜKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOSYADAN TEDARİKÇİ YÜKLE.Designer.cs">
+      <DependentUpon>DOSYADAN TEDARİKÇİ YÜKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOSYADAN ÜRÜN EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOSYADAN ÜRÜN EKLE.Designer.cs">
+      <DependentUpon>DOSYADAN ÜRÜN EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GÜNLÜK MİKTAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GÜNLÜK MİKTAR.Designer.cs">
+      <DependentUpon>GÜNLÜK MİKTAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MÜŞTERİ DÜZENLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MÜŞTERİ DÜZENLE.Designer.cs">
+      <DependentUpon>MÜŞTERİ DÜZENLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MÜŞTERİ EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MÜŞTERİ EKLE.Designer.cs">
+      <DependentUpon>MÜŞTERİ EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MÜŞTERİ LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MÜŞTERİ LİSTESİ.Designer.cs">
+      <DependentUpon>MÜŞTERİ LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TEDARİKÇİ DÜZENLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEDARİKÇİ DÜZENLE.Designer.cs">
+      <DependentUpon>TEDARİKÇİ DÜZENLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEDARİKÇİ EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEDARİKÇİ EKLE.Designer.cs">
+      <DependentUpon>TEDARİKÇİ EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEDARİKÇİ LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEDARİKÇİ LİSTESİ.Designer.cs">
+      <DependentUpon>TEDARİKÇİ LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="örnek format yükle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="örnek format yükle.Designer.cs">
+      <DependentUpon>örnek format yükle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN DÜZENLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN DÜZENLE.Designer.cs">
+      <DependentUpon>ÜRÜN DÜZENLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN EKLE.Designer.cs">
+      <DependentUpon>ÜRÜN EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN KULLANIMI DÜZENLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN KULLANIMI DÜZENLE.Designer.cs">
+      <DependentUpon>ÜRÜN KULLANIMI DÜZENLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN KULLANIMI LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN KULLANIMI LİSTESİ.Designer.cs">
+      <DependentUpon>ÜRÜN KULLANIMI LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN KULLANIMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN KULLANIMI.Designer.cs">
+      <DependentUpon>ÜRÜN KULLANIMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN LİSTESİ.Designer.cs">
+      <DependentUpon>ÜRÜN LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN MİKTAR DÜZENLEME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN MİKTAR DÜZENLEME.Designer.cs">
+      <DependentUpon>ÜRÜN MİKTAR DÜZENLEME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN MİKTAR EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN MİKTAR EKLE.Designer.cs">
+      <DependentUpon>ÜRÜN MİKTAR EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN MİKTAR LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN MİKTAR LİSTESİ.Designer.cs">
+      <DependentUpon>ÜRÜN MİKTAR LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN SATIŞ DÜZENLEME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN SATIŞ DÜZENLEME.Designer.cs">
+      <DependentUpon>ÜRÜN SATIŞ DÜZENLEME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN SATIŞ LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN SATIŞ LİSTESİ.Designer.cs">
+      <DependentUpon>ÜRÜN SATIŞ LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ÜRÜN SATIŞI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜRÜN SATIŞI.Designer.cs">
+      <DependentUpon>ÜRÜN SATIŞI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AYLIK STOK.resx">
+      <DependentUpon>AYLIK STOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOSYADAN MÜŞTERİ YÜKLE.resx">
+      <DependentUpon>DOSYADAN MÜŞTERİ YÜKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOSYADAN TEDARİKÇİ YÜKLE.resx">
+      <DependentUpon>DOSYADAN TEDARİKÇİ YÜKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOSYADAN ÜRÜN EKLE.resx">
+      <DependentUpon>DOSYADAN ÜRÜN EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GÜNLÜK MİKTAR.resx">
+      <DependentUpon>GÜNLÜK MİKTAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MÜŞTERİ DÜZENLE.resx">
+      <DependentUpon>MÜŞTERİ DÜZENLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MÜŞTERİ EKLE.resx">
+      <DependentUpon>MÜŞTERİ EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MÜŞTERİ LİSTESİ.resx">
+      <DependentUpon>MÜŞTERİ LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TEDARİKÇİ DÜZENLE.resx">
+      <DependentUpon>TEDARİKÇİ DÜZENLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEDARİKÇİ EKLE.resx">
+      <DependentUpon>TEDARİKÇİ EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEDARİKÇİ LİSTESİ.resx">
+      <DependentUpon>TEDARİKÇİ LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="örnek format yükle.resx">
+      <DependentUpon>örnek format yükle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN DÜZENLE.resx">
+      <DependentUpon>ÜRÜN DÜZENLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN EKLE.resx">
+      <DependentUpon>ÜRÜN EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN KULLANIMI DÜZENLE.resx">
+      <DependentUpon>ÜRÜN KULLANIMI DÜZENLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN KULLANIMI LİSTESİ.resx">
+      <DependentUpon>ÜRÜN KULLANIMI LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN KULLANIMI.resx">
+      <DependentUpon>ÜRÜN KULLANIMI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN LİSTESİ.resx">
+      <DependentUpon>ÜRÜN LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN MİKTAR DÜZENLEME.resx">
+      <DependentUpon>ÜRÜN MİKTAR DÜZENLEME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN MİKTAR EKLE.resx">
+      <DependentUpon>ÜRÜN MİKTAR EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN MİKTAR LİSTESİ.resx">
+      <DependentUpon>ÜRÜN MİKTAR LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN SATIŞ DÜZENLEME.resx">
+      <DependentUpon>ÜRÜN SATIŞ DÜZENLEME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN SATIŞ LİSTESİ.resx">
+      <DependentUpon>ÜRÜN SATIŞ LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜRÜN SATIŞI.resx">
+      <DependentUpon>ÜRÜN SATIŞI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
